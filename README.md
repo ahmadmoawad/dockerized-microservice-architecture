@@ -51,9 +51,10 @@ and created the UI using themyleaf not angular to save some time :)
 
     1- Discovery server Eureka
     2- Config server
-    3- Rent service that responsible for renting, occuppied the vehicles by the customers
+    3- Rent service that responsible for renting, occupied the vehicles by the customers
     4- Monitor service that responsible for tracking the status of the vehicles and for the demo I used H2 DB, but for the production will use Mongodb
     4- UI service created by themyleaf with two different tables that represent Users with the vehicles and another table that tracking the vehicles by the status with filter option to filter users by their name and vehicles by status
+    For the tracking table the status is changed randomly in short time about ~ 10 Second
     5- Client service for making the integration testing for rent service and monitoring
   
 ## AWS as cloud
