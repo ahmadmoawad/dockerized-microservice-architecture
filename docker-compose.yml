@@ -1,0 +1,57 @@
+version: '3'
+services:
+  discovery:
+    image: am0awad/discovery
+    ports:
+      - 8761:8761
+  config:
+    image: am0awad/config
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+      - discovery
+    ports:
+      - 8888:8888
+  rentservice:
+    image: am0awad/rentservice
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+      - discovery
+      - config
+    ports:
+      - 8081:8081
+  monitor:
+    image: am0awad/monitor
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+      - discovery
+      - config
+    ports:
+      - 8083:8083
+  carui:
+    image: am0awad/carui
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    restart: on-failure
+    depends_on:
+      - discovery
+      - config
+    ports:
+      - 8080:8080
+  client:
+    image: am0awad/client
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+      - discovery
+      - config
+      - rentservice
+      - carui
+      - monitor

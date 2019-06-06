@@ -1,0 +1,103 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "environment": [
+                {
+                    "name": "JAVA_OPTS",
+                    "value": " -DEUREKA_SERVER=http://discovery:8761/eureka"
+                }
+            ],
+            "essential": true,
+            "image": "am0awad/carui",
+            "name": "carui", 
+            "memory": 512,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080
+                }
+            ]
+        },
+        {
+            "environment": [
+                {
+                    "name": "JAVA_OPTS",
+                    "value": " -DEUREKA_SERVER=http://discovery:8761/eureka"
+                }
+            ],
+            "essential": true,
+            "image": "am0awad/client",
+            "name": "client",
+            "memory": 128
+        },
+        {
+            "environment": [
+                {
+                    "name": "JAVA_OPTS",
+                    "value": " -DEUREKA_SERVER=http://discovery:8761/eureka"
+                }
+            ],
+            "essential": true,
+            "image": "am0awad/config",
+            "name": "config",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "containerPort": 8888,
+                    "hostPort": 8888
+                }
+            ]
+        },
+        {
+            "essential": true,
+            "image": "am0awad/discovery",
+            "name": "discovery",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "containerPort": 8761,
+                    "hostPort": 8761
+                }
+            ]
+        },
+        {
+            "environment": [
+                {
+                    "name": "JAVA_OPTS",
+                    "value": " -DEUREKA_SERVER=http://discovery:8761/eureka"
+                }
+            ],
+            "essential": true,
+            "image": "am0awad/monitor",
+            "name": "monitor",
+            "memory": 256,
+            "portMappings": [
+                {
+                    "containerPort": 8083,
+                    "hostPort": 8083
+                }
+            ]
+        },
+        {
+            "environment": [
+                {
+                    "name": "JAVA_OPTS",
+                    "value": " -DEUREKA_SERVER=http://discovery:8761/eureka"
+                }
+            ],
+            "essential": true,
+            "image": "am0awad/rentservice",
+            "name": "rentservice",
+            "memory": 256,
+            "portMappings": [
+                {
+                    "containerPort": 8081,
+                    "hostPort": 8081
+                }
+            ]
+        }
+    ],
+    "family": "",
+    "volumes": []
+}
