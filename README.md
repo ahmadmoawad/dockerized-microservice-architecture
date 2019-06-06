@@ -40,7 +40,7 @@
 
 	1. Write an integration test...done
 	2. Write an automation test...not
-	3. Explain if it is possible to be in Serverless architecture and how?...run
+	3. Explain if it is possible to be in Serverless architecture and how?...done
 	4. Continuous delivery to the solution to the cloud...done
 
 ## The Solution
@@ -61,6 +61,8 @@ I have create buildspec for CodeBuild CI at AWS and Dockerrun.aws.json for deplo
 
 ## The Architecture
 
+![alt text](https://github.com/am0awad/assignment/blob/master/images/screen_4.PNG)
+
 ## Dockerize the whole solution
 I am using docker-compose yml file to manage the images for each of the services that I pushed at Docker Hub
 
@@ -72,6 +74,9 @@ I am using docker-compose yml file to manage the images for each of the services
     6- Client image: https://cloud.docker.com/repository/docker/am0awad/client
 
 ## Screenshots
-![alt text](https://github.com/am0awad/assignment/blob/master/screen_1.PNG)
-![alt text](https://github.com/am0awad/assignment/blob/master/screen_2.PNG)
-![alt text](https://github.com/am0awad/assignment/blob/master/screen_3.PNG)
+#### Web UI interface
+![alt text](https://github.com/am0awad/assignment/blob/master/images/screen_1.PNG)
+![alt text](https://github.com/am0awad/assignment/blob/master/images/screen_2.PNG)
+
+#### AWS CodeBuild CI with CodeCommit  
+![alt text](https://github.com/am0awad/assignment/blob/master/images/screen_3.PNG)
