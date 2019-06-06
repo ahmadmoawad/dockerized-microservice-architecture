@@ -90,7 +90,9 @@ We can use Lambda for doing the job, we can create the following flow: 1- Create
 
 ## How you can run the solution:
 You will need the following dependencies
+
 	1- Docker
 	2- Docker-Compose
 and run the following command
-	docker-compose up
+
+	$ docker-compose up
