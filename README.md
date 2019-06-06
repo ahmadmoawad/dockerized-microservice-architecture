@@ -80,3 +80,10 @@ I am using docker-compose yml file to manage the images for each of the services
 
 #### AWS CodeBuild CI with CodeCommit  
 ![alt text](https://github.com/am0awad/assignment/blob/master/images/screen_3.PNG)
+
+
+#### For the deployment at AWS
+there are many solutions, you can use Beanstalk, ansible playbook, ECS, EC2 manual configuration with Autoscale group and bootstrap and Cloudformation
+
+#### For the Serverless architecture
+We can use Lambda for doing the job, we can create the following flow: 1- Create Lambda function (1) for register vehicle to a customer 2- Create Another Lambda function (2) for getting the response from the vehicles 3- Create a trigger on Lambda function (2) to save the data 3- Create Lambda function (3) for showing the result about the status
