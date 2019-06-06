@@ -1,5 +1,3 @@
-## alten-assignment
-
 # Alten Code Challenge
 
 	- Imagine you are one of our consultants and you got assigned to a project at one of our top partners.
@@ -73,3 +71,7 @@ I am using docker-compose yml file to manage the images for each of the services
     5- UI image: https://cloud.docker.com/repository/docker/am0awad/carui
     6- Client image: https://cloud.docker.com/repository/docker/am0awad/client
 
+## Screenshots
+![alt text](https://github.com/am0awad/assignment/blob/master/screen_1.PNG)
+![alt text](https://github.com/am0awad/assignment/blob/master/screen_2.PNG)
+![alt text](https://github.com/am0awad/assignment/blob/master/screen_3.PNG)
