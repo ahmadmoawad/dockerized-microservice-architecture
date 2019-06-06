@@ -7,7 +7,7 @@
 	- They have a number of connected vehicles that belongs to a number of customers.
 	- They have a need to be able to view the status of the connection among these vehicles on a monitoring display.
 	- The vehicles send the status of the connection one time per minute.
-	- The status can be compared with a ping (network trace); no request from the vehicle means no connection. 
+	- The status can be compared with a ping (network trace); no request from the vehficle means no connection. 
 	- So, vehicle is either Connected or Disconnected.
 
 ## Task:
@@ -53,7 +53,7 @@ and created the UI using themyleaf not angular to save some time :)
     2- Config server
     3- Rent service that responsible for renting, occupied the vehicles by the customers
     4- Monitor service that responsible for tracking the status of the vehicles and for the demo I used H2 DB, but for the production will use Mongodb
-    4- UI service created by themyleaf with two different tables that represent Users with the vehicles and another table that tracking the vehicles by the status with filter option to filter users by their name and vehicles by status
+    4- UI service created by themyleaf with two different tables that represent Users with the vehicles and another table that tracking the vehicles by the status with filter option to filter users by their names and vehicles by status (online/disconnected)
     For the tracking table the status is changed randomly in short time about ~ 10 Second
     5- Client service for making the integration testing for rent service and monitoring
   
