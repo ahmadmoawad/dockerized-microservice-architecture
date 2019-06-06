@@ -40,18 +40,18 @@ services:
         -DEUREKA_SERVER=http://discovery:8761/eureka
     restart: on-failure
     depends_on:
-      - discovery
-      - config
+      - rentservice
+      - monitor
     ports:
       - 8080:8080
-  client:
-    image: am0awad/client
-    environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery:8761/eureka
-    depends_on:
-      - discovery
-      - config
-      - rentservice
-      - carui
-      - monitor
+#  client:
+#    image: am0awad/client
+#    environment:
+#      - JAVA_OPTS=
+#        -DEUREKA_SERVER=http://discovery:8761/eureka
+#    depends_on:
+#      - discovery
+#      - config
+#      - rentservice
+#      - carui
+#      - monitor
