@@ -1,3 +1,5 @@
+<img src="https://github.com/am0awad/assignment/blob/master/images/screen_5.jpg" width="100" align="center">
+
 # Alten Code Challenge
 
 	- Imagine you are one of our consultants and you got assigned to a project at one of our top partners.
