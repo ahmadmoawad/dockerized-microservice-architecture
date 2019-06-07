@@ -1,4 +1,4 @@
-<img src="https://github.com/am0awad/assignment/blob/master/images/screen_5.jpg" width="100" align="center">
+<img src="https://github.com/am0awad/assignment/blob/master/images/screen_5.jpg" width="100">
 
 # Alten Code Challenge
 
@@ -16,7 +16,7 @@
 
 	- Your task will be to create a data store that keeps these vehicles with their status and the customers who own them, as well as a GUI (preferably web-based) that displays the status.
 	- Obviously, for this task, there are no real vehicles available that can respond to your "ping" request.
-	- This can either be solved by using static values or ​​by creating a separate machinery that returns random fake status.
+	- This can either be solved by using static values or by creating a separate machinery that returns random fake status.
 
 ## Requirements
 
@@ -83,7 +83,11 @@ I am using docker-compose yml file to manage the images for each of the services
 
 ### AWS CodeBuild CI with CodeCommit  
 ![alt text](https://github.com/am0awad/assignment/blob/master/images/screen_3.PNG)
+by using build script: https://github.com/am0awad/assignment/blob/master/buildspec.yml
 
+## For the continuous delivery at AWS
+The project is ready for this task by using `Dockerrun.aws.json` file: https://github.com/am0awad/assignment/blob/master/Dockerrun.aws.json
+and it's up to you to deploy it using what service you prefer better.
 
 ## For the deployment at AWS
 there are many solutions, you can use Beanstalk, ansible playbook, ECS, EC2 manual configuration with Autoscale group and bootstrap and Cloudformation
@@ -101,3 +105,4 @@ and run the following command
 	$ docker-compose up
 
 Then open your browser and type: http://localhost:8080/
+enjoy!
