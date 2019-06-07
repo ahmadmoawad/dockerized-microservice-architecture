@@ -51,11 +51,11 @@ and created the UI using thymeleaf not angular to save some time :)
 
 ## The Services
 
-    1- Discovery server Eureka
-    2- Config server
-    3- Rent service that responsible for renting, occupied the vehicles by the customers
-    4- Monitor service that responsible for tracking the status of the vehicles and for the demo I used H2 DB, but for the production will use Mongodb
-    4- UI service created by thymeleaf with two different tables that represent Users with the vehicles and another table that tracking the vehicles by the status with filter option to filter users by their names and vehicles by status (online/disconnected)
+    1- Discovery server Eureka run on `port:8761`
+    2- Config server run on `port:8888`
+    3- Rent service that responsible for renting, occupied the vehicles by the customers run on `port:8081`
+    4- Monitor service that responsible for tracking the status of the vehicles and for the demo I used H2 DB, but for the production will use Mongodb run on `port:8083`
+    4- UI service created by thymeleaf with two different tables that represent Users with the vehicles and another table that tracking the vehicles by the status with filter option to filter users by their names and vehicles by status (online/disconnected) run on `port:8080`
     For the tracking table the status is changed randomly in short time about ~ 10 Second
     5- Client service for making the integration testing for rent service and monitoring
   
@@ -67,7 +67,7 @@ I have create buildspec for CodeBuild CI at AWS and Dockerrun.aws.json for deplo
 ![alt text](https://github.com/am0awad/assignment/blob/master/images/screen_4.PNG)
 
 ## Dockerize the whole solution
-I am using docker-compose yml file to manage the images for each of the services that I pushed at Docker Hub
+I am using docker-compose yml file to manage the images for each of the following services which I already pushed them to Docker Hub
 
     1- Discovery image: https://cloud.docker.com/repository/docker/am0awad/discovery
     2- Config image: https://cloud.docker.com/repository/docker/am0awad/config
