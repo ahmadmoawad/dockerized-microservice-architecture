@@ -93,7 +93,14 @@ and it's up to you to deploy it using what service you prefer better.
 there are many solutions, you can use Beanstalk, ansible playbook, ECS, EC2 manual configuration with Autoscale group and bootstrap and Cloudformation
 
 ## For the Serverless architecture
-We can use Lambda for doing the job, we can create the following flow: 1- Create Lambda function (1) for register vehicle to a customer 2- Create Another Lambda function (2) for getting the response from the vehicles 3- Create a trigger on Lambda function (2) to save the data 3- Create Lambda function (3) for showing the result about the status
+	We can use Lambda for doing the job, we can create the following flow:
+	1- Create Lambda function calledn fn(1) for doing registration to the vehicles to the customers
+	2- Create a trigger on Lambda function fn(1) to save the data to MySQL/MariaDB
+	3- Create another Lambda function called fn(2) for getting the response (status) from the vehicles 
+	4- Create a trigger on Lambda function fn(2) to save the data to DynamoDB
+	5- Create Lambda function called fn(3) for making redirect to the webpage hosted at S3 service
+	6- Create Lambda function called fn(4) that return JSON data that showing the status of the vechicles
+	7- Update the request every 1 minute for getting the new update about the status
 
 ## How you can run the solution:
 You will need the following dependencies
