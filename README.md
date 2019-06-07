@@ -106,8 +106,9 @@ We can use Lambda for doing the job, we can create the following flow:
 ## How you can run the solution:
 You will need the following dependencies
 
-	1- Docker
-	2- Docker-Compose
+	1- Docker-Compose yml file: https://github.com/am0awad/assignment/blob/master/docker-compose.yml
+	2- Install Docker: https://docs.docker.com/docker-for-mac/install/
+	3- Install Docker-Compose: https://docs.docker.com/compose/install/
 and run the following command
 
 	$ docker-compose up
