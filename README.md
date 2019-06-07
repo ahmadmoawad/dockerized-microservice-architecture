@@ -99,3 +99,5 @@ You will need the following dependencies
 and run the following command
 
 	$ docker-compose up
+
+Then open your browser and type: http://localhost:8080/
