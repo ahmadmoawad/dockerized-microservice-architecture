@@ -41,7 +41,7 @@
 ## Optional Requirements
 
 	1. Write an integration test...done
-	2. Write an automation test...not
+	2. Write an automation test...conflict with web driver
 	3. Explain if it is possible to be in Serverless architecture and how?...done
 	4. Continuous delivery to the solution to the cloud...done
 
