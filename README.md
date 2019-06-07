@@ -93,7 +93,8 @@ and it's up to you to deploy it using what service you prefer better.
 there are many solutions, you can use Beanstalk, ansible playbook, ECS, EC2 manual configuration with Autoscale group and bootstrap and Cloudformation
 
 ## For the Serverless architecture
-	We can use Lambda for doing the job, we can create the following flow:
+We can use Lambda for doing the job, we can create the following flow:
+
 	1- Create Lambda function calledn fn(1) for doing registration to the vehicles to the customers
 	2- Create a trigger on Lambda function fn(1) to save the data to MySQL/MariaDB
 	3- Create another Lambda function called fn(2) for getting the response (status) from the vehicles 
