@@ -51,13 +51,13 @@ and created the UI using thymeleaf not angular to save some time :)
 
 ## The Services
 
-    1- Discovery server Eureka run on `port:8761`
-    2- Config server run on `port:8888`
-    3- Rent service that responsible for renting, occupied the vehicles by the customers run on `port:8081`
-    4- Monitor service that responsible for tracking the status of the vehicles and for the demo I used H2 DB, but for the production will use Mongodb run on `port:8083`
-    4- UI service created by thymeleaf with two different tables that represent Users with the vehicles and another table that tracking the vehicles by the status with filter option to filter users by their names and vehicles by status (online/disconnected) run on `port:8080`
-    For the tracking table the status is changed randomly in short time about ~ 10 Second
-    5- Client service for making the integration testing for rent service and monitoring
+	1- Discovery server Eureka run on port:8761
+	2- Config server run on port:8888
+	3- Rent service that responsible for renting, occupied the vehicles by the customers run on port:8081
+	4- Monitor service that responsible for tracking the status of the vehicles and for the demo I used H2 DB, but for the production will use Mongodb run on port:8083
+	5- UI service created by thymeleaf with two different tables that represent Users with the vehicles and another table that tracking the vehicles by the status with filter option to filter users by their names and vehicles by status (online/disconnected) run on port:8080
+	For the tracking table the status is changed randomly in short time about ~ 10 Second
+	6- Client service for making the integration testing for rent service and monitoring
   
 ## AWS as cloud
 I have create buildspec for CodeBuild CI at AWS and Dockerrun.aws.json for deploy at Beanstalk or ECS
